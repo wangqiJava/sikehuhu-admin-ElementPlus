@@ -13,7 +13,11 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-vue": "^4.1.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
     "only-allow": "^1.1.1",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
