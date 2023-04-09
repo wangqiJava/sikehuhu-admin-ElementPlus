@@ -1,3 +1,14 @@
 {
-  "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin"]
+	"recommendations": [
+		"vue.volar",
+		"vue.vscode-typescript-vue-plugin",
+		"hollowtree.vue-snippets",
+		"stylelint.vscode-stylelint",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"editorconfig.editorconfig",
+		"mikestead.dotenv",
+		"ms-ceintl.vscode-language-pack-zh-hans",
+		"syler.sass-indented"
+	]
 }
