@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.1",
 	"description": "VUE3+VITE4+ElementPlus后台管理",
-	"author": "wangqi",
+	"author": "WangQi",
 	"scripts": {
 		"dev": "vite",
 		"serve": "vite",
@@ -34,6 +34,7 @@
 		"commitizen": "^4.3.0",
 		"cz-git": "^1.6.1",
 		"czg": "^1.6.1",
+		"dotenv": "^16.0.3",
 		"eslint": "^8.37.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^4.2.1",

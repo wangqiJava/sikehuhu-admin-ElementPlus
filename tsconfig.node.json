@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
-  },
-  "include": ["vite.config.ts"]
+	"compilerOptions": {
+		"composite": true, //启用允许 TypeScript 项目与项目引用一起使用的约束
+		"module": "ESNext", // 使用 ES Module 格式打包编译后的文件
+		"moduleResolution": "Node", // 使用 Node 的模块解析策略
+		"allowSyntheticDefaultImports": true //当模块没有默认导出时，允许“从 y 导入 x”。
+	},
+	"include": ["vite.config.ts", "src/**/*.ts"]
 }

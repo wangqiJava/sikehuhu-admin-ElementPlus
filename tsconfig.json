@@ -1,22 +1,20 @@
 {
 	"compilerOptions": {
-		"target": "ESNext",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"strict": true,
-		"jsx": "preserve",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"esModuleInterop": true,
+		"target": "ESNext", // 将代码编译为最新版本的 JS
+		"useDefineForClassFields": true, // 使用 Object.defineProperty 定义 class 中的属性，而非使用 obj.key = value 的形式定义属性
+		"module": "ESNext", // 使用 ES Module 格式打包编译后的文件
+		"moduleResolution": "Node", // 使用 Node 的模块解析策略
+		"strict": true, // 启用所用严格的类型检查
+		"jsx": "preserve", // 保留原始的 JSX 代码，不进行编译
+		"resolveJsonModule": true, // 允许引入 JSON 文件
+		"isolatedModules": true, // 该属性要求所有文件都是 ES Module 模块。
+		"esModuleInterop": true, // 允许使用 import 引入使用 export = 导出的内容
 		"lib": ["ESNext", "DOM"],
-		// 跳过第三方库检查，解决打包失败
-		"skipLibCheck": true,
-		"noEmit": true,
-		"sourceMap": true,
-		"baseUrl": "./",
-		// 模块名到基于 baseUrl 的路径映射的列表。
+		"skipLibCheck": true, // 跳过第三方库检查，解决打包失败
+		"sourceMap": true, // 生成 sourceMap 文件
+		"baseUrl": "./", // 解析非相对模块名的基准目录
 		"paths": {
+			// 模块名到基于 baseUrl 的路径映射的列表。
 			"@": ["src"],
 			"@/*": ["src/*"]
 		}
