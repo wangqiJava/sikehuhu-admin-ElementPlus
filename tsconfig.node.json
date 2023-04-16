@@ -5,5 +5,5 @@
 		"moduleResolution": "Node", // 使用 Node 的模块解析策略
 		"allowSyntheticDefaultImports": true //当模块没有默认导出时，允许“从 y 导入 x”。
 	},
-	"include": ["vite.config.ts", "src/**/*.ts"]
+	"include": ["vite.config.ts"]
 }
