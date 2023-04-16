@@ -17,7 +17,8 @@
 			// 模块名到基于 baseUrl 的路径映射的列表。
 			"@": ["src"],
 			"@/*": ["src/*"]
-		}
+		},
+		"types": ["vite/client", "element-plus/global"]
 	},
 	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
 	"exclude": ["node_modules", "dist", "**/*.js"],
