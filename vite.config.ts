@@ -4,6 +4,7 @@ import eslintPlugin from "vite-plugin-eslint";
 import viteCompression from "vite-plugin-compression";
 import { wrapperEnv } from "./src/utils/getEnv";
 import { resolve } from "path";
+import UnoCSS from "unocss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
@@ -18,6 +19,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 		},
 		plugins: [
 			vue(),
+			//unocss
+			UnoCSS(),
 			// * EsLint 报错信息显示在浏览器界面上
 			eslintPlugin(),
 			// * gzip compress
@@ -38,7 +41,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			// 跨域代理配置
 			proxy: {
 				"/api": {
-					target: "https://mock.mengxuegu.com/mock/62a7f42212c14164246307f0", // easymock
+					target: "http://localhost:8080",
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, "")
 				}
