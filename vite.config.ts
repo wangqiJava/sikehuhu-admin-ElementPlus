@@ -41,7 +41,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			// 跨域代理配置
 			proxy: {
 				"/api": {
-					target: "http://localhost:8080",
+					target: viteEnv.VITE_API_BACK_URL,
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, "")
 				}
