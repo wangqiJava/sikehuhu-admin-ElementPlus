@@ -1,5 +1,5 @@
 <template>
-	<div class="login-container flx-center">
+	<div class="login-container flex justify-center flex-items-center">
 		<div class="login-box">
 			<div class="login-left">
 				<img src="@/assets/images/WMS.svg" alt="login" />

@@ -1,14 +1,14 @@
 <template>
 	<el-form ref="loginFormRef" :model="loginForm" :rules="loginRules" size="large">
 		<el-form-item prop="username">
-			<el-input v-model="loginForm.username" placeholder="用户名：admin">
+			<el-input v-model="loginForm.username" placeholder="用户名">
 				<template #prefix>
 					<el-icon class="el-input__icon"><user /></el-icon>
 				</template>
 			</el-input>
 		</el-form-item>
 		<el-form-item prop="password">
-			<el-input type="password" v-model="loginForm.password" placeholder="密码：123456" show-password autocomplete="new-password">
+			<el-input type="password" v-model="loginForm.password" placeholder="密码" show-password autocomplete="new-password">
 				<template #prefix>
 					<el-icon class="el-input__icon"><lock /></el-icon>
 				</template>
@@ -29,17 +29,15 @@ import { useRouter } from "vue-router";
 import { Login } from "@/api/interface";
 import { ElNotification } from "element-plus";
 import { loginApi } from "@/api/modules/login";
-import { HOME_URL } from "@/config/config";
+// import { HOME_URL } from "@/config/config";
 import { CircleClose, UserFilled } from "@element-plus/icons-vue";
-import type { ElForm } from "element-plus";
+import type { ElForm, FormInstance, FormRules } from "element-plus";
 
 const router = useRouter();
 
 // 定义 formRef（校验规则）
-////InstanceType该函数返回（构造） 由某个构造函数构造出来的实例类型组成的类型
-type FormInstance = InstanceType<typeof ElForm>;
 const loginFormRef = ref<FormInstance>();
-const loginRules = reactive({
+const loginRules = reactive<FormRules>({
 	username: [{ required: true, message: "请输入用户名", trigger: "blur" }],
 	password: [{ required: true, message: "请输入密码", trigger: "blur" }]
 });
@@ -57,7 +55,7 @@ const login = (formEl: FormInstance | undefined) => {
 			console.log("data", data);
 
 			// 2.跳转到首页
-			router.push(HOME_URL);
+			router.push("/layout");
 			ElNotification({
 				title: `🎉🎉🎉`,
 				message: "欢迎登录WMS",

@@ -141,5 +141,6 @@
 	},
 	"prettier.useEditorConfig": false,
 	"prettier.configPath": ".prettierrc.js",
-	"vue.features.codeActions.enable": false
+	"vue.features.codeActions.enable": false,
+	"vue.codeActions.enabled": false
 }
